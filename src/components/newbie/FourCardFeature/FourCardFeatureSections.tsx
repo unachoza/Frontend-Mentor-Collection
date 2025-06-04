@@ -5,7 +5,7 @@ import karma from "./assets/images/icon-karma.svg";
 import calculator from "./assets/images/icon-calculator.svg";
 const FourCardFeatureSections = () => {
 	return (
-		<div>
+		<div className="root">
 			<div className="title-container">
 				<div className="top-title">Reliable, efficient delivery</div>
 				<div className="bottom-title">Powered by Technology</div>
@@ -14,28 +14,28 @@ const FourCardFeatureSections = () => {
 				</div>
 			</div>
 			<div className="sections-container">
-				<div className="section">
+				<div id="cell-1" className="section">
 					<div className="title">Supervisor</div>
 					<div className="descriptoin"> Monitors activity to identify project roadblocks</div>
 					<div className="image">
 						<img src={supervisor} alt="magnifying glass icon" />
 					</div>
 				</div>
-				<div className="section">
+				<div id="cell-2" className="section">
 					<div className="title">Team Builder</div>
 					<div className="descriptoin"> Scans our talent network to create the optimal team for your project</div>
 					<div className="image">
 						<img src={teamBuilder} alt="home icon" />
 					</div>
 				</div>
-				<div className="section">
+				<div id="cell-3" className="section">
 					<div className="title">Karma</div>
 					<div className="descriptoin"> Regularly evaluates our talent to ensure quality</div>
 					<div className="image">
 						<img src={karma} alt="lightbulb icon" />
 					</div>
 				</div>
-				<div className="section">
+				<div id="cell-4" className="section">
 					<div className="title">Calculator</div>
 					<div className="descriptoin"> Uses data from past projects to provide better delivery estimates</div>
 					<div className="image">

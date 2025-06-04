@@ -21,13 +21,51 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	background-color: white;
+	border: solid;
+}
+
+.root {
+	max-width: 1280px;
+	height: 100vh;
+	border: solid red;
 }
 
 .title-container {
+	font-family: var(--font);
+	color: var(--Grey-500);
+	width: 35vw;
+	height: 29vh;
+	margin: 0 auto;
 }
 
 .sections-container {
+	width: 80vw;
+	height: 71vh;
+	margin: 0 auto;
+	display: grid;
+	grid-auto-columns: 1fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"cell-1 cell-2 cell-4"
+		"cell-1 cell-3 cell-4";
 }
 
+#cell-1 {
+	grid-area: cell-1;
+	align-self: center;
+}
+#cell-4 {
+	grid-area: cell-4;
+	align-self: center;
+}
 .section {
+	width: 350px;
+	height: 250px;
+	border: solid blue;
+}
+
+.section .title {
+	color: red;
 }
