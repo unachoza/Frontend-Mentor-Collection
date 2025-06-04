@@ -9,8 +9,8 @@ createRoot(document.getElementById("root")!).render(
 	<BrowserRouter>
 		<Routes>
 			<Route path="/" element={<App />} />
-			<Route path="/perfume" element={<ParfumProductCard />} />
-			<Route path="/four" element={<FourCardFeatureSections />} />
+			<Route path="perfume" element={<ParfumProductCard />} />
+			<Route path="four" element={<FourCardFeatureSections />} />
 		</Routes>
 	</BrowserRouter>
 );
