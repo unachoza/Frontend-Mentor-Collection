@@ -9,7 +9,7 @@ const FourCardFeatureSections = () => {
 			<div className="title-container">
 				<div className="top-title">Reliable, efficient delivery</div>
 				<div className="bottom-title">Powered by Technology</div>
-				<div className="description">
+				<div className="subtitle">
 					Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful
 				</div>
 			</div>

@@ -41,18 +41,18 @@
 }
 
 .title-container .top-title {
-	font-size: 1.9rem;
+	font-size: 1.9em;
 	font-weight: var(--font-light);
 	line-height: 140%;
 	letter-spacing: 0.25px;
 }
 .title-container .bottom-title {
-	font-size: 2rem;
+	font-size: 2em;
 	font-weight: var(--font-bold);
 	line-height: 140%;
 	letter-spacing: 0.25px;
 }
-.title-container .description {
+.title-container .subtitle {
 	font-size: 0.9rem;
 	letter-spacing: 0;
 }
@@ -120,4 +120,119 @@
 	justify-content: end;
 	align-items: flex-end;
 	height: 60%;
+}
+
+/* Responsive */
+/* tablet */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.root {
+		min-width: 1040px;
+		width: 780px;
+	}
+	.title-container {
+		width: 80vw;
+	}
+	.sections-container {
+		height: 85vh;
+		width: 100%;
+		gap: 1rem;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"cell-1 cell-1"
+			"cell-2 cell-3"
+			"cell-4 cell-4";
+	}
+	#cell-1 {
+		grid-area: cell-1;
+		align-self: center;
+		justify-self: center;
+	}
+	#cell-2 {
+		grid-area: cell-2;
+		align-self: center;
+		justify-self: right;
+	}
+	#cell-3 {
+		grid-area: cell-3;
+		align-self: center;
+		justify-self: left;
+	}
+	#cell-4 {
+		grid-area: cell-4;
+		align-self: center;
+		justify-self: center;
+	}
+	.section {
+		width: 314px;
+		height: 250px;
+	}
+}
+
+/* mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.root {
+		min-width: 350px;
+		max-height: 900px;
+	}
+
+	.title-container {
+		padding-top: 3vh;
+		margin-bottom: 3vh;
+		width: 90vw;
+		height: 20vh;
+	}
+
+	.title-container .top-title {
+		font-size: 1.5rem;
+		line-height: 160%;
+	}
+
+	.title-container .bottom-title {
+		font-size: 1.5rem;
+	}
+
+	.title-container .subtitle {
+		margin-top: 2px;
+	}
+
+	.sections-container {
+		width: 85vw;
+		grid-template-rows: auto;
+		grid-template-areas: "cell-1" "cell-2" "cell-3" "cell-4";
+		grid-gap: 20px;
+	}
+
+	#cell-1 {
+		grid-area: cell-1;
+		align-self: center;
+		justify-self: center;
+	}
+
+	#cell-2 {
+		grid-area: cell-2;
+		align-self: center;
+		justify-self: right;
+	}
+
+	#cell-3 {
+		grid-area: cell-3;
+		align-self: center;
+		justify-self: left;
+	}
+
+	#cell-4 {
+		grid-area: cell-4;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.section {
+		width: 85vw;
+		padding: 20px;
+	}
+
+	.section .image {
+		height: 50%;
+	}
 }
