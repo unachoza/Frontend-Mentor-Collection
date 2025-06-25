@@ -14,6 +14,9 @@ function App() {
 					<li>
 						<Link to="/perfume">Perfume card</Link>
 					</li>
+					<li>
+						<Link to="/meet">Meet Landing Page</Link>
+					</li>
 				</ol>
 			</div>
 		</>
