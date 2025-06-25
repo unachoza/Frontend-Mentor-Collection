@@ -15,7 +15,7 @@ const MeetingLandingPage = () => {
 			<div className="nav">
 				<img src={logo} alt="company logo" />
 			</div>
-			<div className="hero-section">
+			<div className="hero section">
 				<div className="hero-left">
 					<img src={heroLeft} alt="a collection of faces in circles" />
 				</div>
@@ -25,15 +25,17 @@ const MeetingLandingPage = () => {
 						Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
 					</div>
 					<div className="buttons-container">
-						<button> Download v1.3</button>
-						<button>What is it?</button>
+						<button className="cyan">
+							Download <span>v1.3</span>
+						</button>
+						<button className="purple">What is it?</button>
 					</div>
 				</div>
 				<div className="hero-right">
-					<img src={heroLeft} alt="a collection of faces in circles" />
+					<img src={heroRight} alt="a collection of faces in circles" />
 				</div>
 			</div>
-			<div className="main-section">
+			<div className="main section">
 				<div className="main-content">
 					<div className="number">
 						<img src={number1} alt="number 1" />
@@ -55,14 +57,16 @@ const MeetingLandingPage = () => {
 					</div>
 				</div>
 			</div>
-			<div className="footer-section">
+			<div className="footer section">
 				<div className="number">
 					<img src={number2} alt="number 2" />
 				</div>
 				<div className="text-content">
 					<div className="title">Experience more together</div>
 					<div className="sub-title">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</div>
-					<button>Download v1.3</button>
+					<button className="purple">
+						Download <span> v1.3</span>
+					</button>
 				</div>
 			</div>
 		</div>
