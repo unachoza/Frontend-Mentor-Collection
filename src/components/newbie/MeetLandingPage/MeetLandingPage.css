@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@0;1&display=swap");
+
+:root {
+	--Cyan-600: hsl(192, 37%, 48%);
+	--Cyan-300: hsl(192, 90%, 77%);
+	--Purple-600: hsl(268, 34%, 53%);
+	--Purple-300: hsl(268, 100%, 86%);
+	--Slate-900: hsl(240, 21, 20);
+	--Slate-600: hsl(240, 10, 57);
+	--Slate-300: hsl(240, 18, 85);
+	--White: hsl(0, 0, 98);
+
+	--font: "Red Hat Display", sans-serif;
+}

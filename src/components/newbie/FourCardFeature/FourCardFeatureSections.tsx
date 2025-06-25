@@ -3,6 +3,7 @@ import supervisor from "./assets/images/icon-supervisor.svg";
 import teamBuilder from "./assets/images/icon-team-builder.svg";
 import karma from "./assets/images/icon-karma.svg";
 import calculator from "./assets/images/icon-calculator.svg";
+
 const FourCardFeatureSections = () => {
 	return (
 		<div className="root">

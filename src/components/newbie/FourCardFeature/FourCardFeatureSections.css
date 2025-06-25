@@ -13,6 +13,7 @@
 	--font-light: 200;
 	--font-regular: 400;
 	--font-bold: 600;
+	--font-very-bold: 700;
 }
 
 *,
@@ -99,7 +100,7 @@
 
 .section .title {
 	font-size: 1.2rem;
-	font-weight: var(--font-bold);
+	font-weight: var(--font-very-bold);
 	padding: 0;
 	margin-bottom: 10px;
 	text-transform: capitalize;
