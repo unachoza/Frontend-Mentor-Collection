@@ -17,7 +17,9 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	background-color: var(--White);
 }
+
 *,
 *::before,
 *::after {
@@ -56,6 +58,7 @@ body {
 	height: 28px;
 }
 
+/********* HERO SECTION *********/
 .hero {
 	height: 54vh;
 	display: flex;
@@ -104,6 +107,94 @@ body {
 	display: flex;
 }
 
+/********* MAIN SECTION *********/
+.main.section {
+	height: 96vh;
+	padding: 0;
+}
+
+.main.section .main-content {
+	margin: 7.5% 11%;
+	border: solid lightcoral 2px;
+}
+
+.main.section .main-content .image-collage {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+
+.main.section .main-content .image-collage img {
+	height: 225px;
+	border-radius: 8px;
+}
+
+.main.section .main-content .text-content {
+	display: flex;
+	flex-direction: column;
+	border: solid green;
+	padding: 0 30%;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+}
+
+.main.section .main-content .text-content .title {
+	font-weight: 800;
+	font-size: 1rem;
+	line-height: 110%;
+	letter-spacing: 4px;
+	color: var(--Cyan-600);
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.main.section .main-content .text-content .sub-title {
+	font-weight: 800;
+	font-size: 2.5rem;
+	line-height: 110%;
+	text-align: center;
+	color: var(--Slate-900);
+	margin-bottom: 20px;
+}
+
+.main.section .main-content .text-content .content {
+	font-size: 1.125rem;
+	line-height: 110%;
+	text-align: center;
+	color: var(--Slate-600);
+}
+
+/******** COMPONENTS ********/
+
+/******** NUMBER */
+.number {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.number .rectangle {
+	height: 60px;
+	width: 1px;
+	margin: 0px 24.5px;
+	border: solid 1px var(--Slate-300);
+}
+
+.number .circle {
+	height: 49px;
+	width: 49px;
+	border-radius: 50%;
+	border: solid 1px var(--Slate-300);
+	color: var(--Slate-600);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 900;
+}
+
+/******** BUTTON */
 button {
 	width: 170px;
 	height: 50px;

@@ -1,8 +1,6 @@
 import logo from "./assets/logo.svg";
 import heroLeft from "./assets/images/desktop/image-hero-left.png";
 import heroRight from "./assets/images/desktop/image-hero-right.png";
-import number1 from "./assets/images/number-1.png";
-import number2 from "./assets/images/number-2.png";
 import manTexting from "./assets/images/desktop/image-man-texting.jpg";
 import menInMeeting from "./assets/images/desktop/image-men-in-meeting.jpg";
 import womanInVideocall from "./assets/images/desktop/image-woman-in-videocall.jpg";
@@ -38,7 +36,8 @@ const MeetingLandingPage = () => {
 			<div className="main section">
 				<div className="main-content">
 					<div className="number">
-						<img src={number1} alt="number 1" />
+						<div className="rectangle"></div>
+						<div className="circle">01</div>
 					</div>
 					<div className="image-collage">
 						<img src={womenVideochatting} alt=" women video chatting" />
@@ -50,7 +49,6 @@ const MeetingLandingPage = () => {
 						<div className="title">Built for modern use</div>
 						<div className="sub-title">Smarter meetings, all in one place</div>
 						<div className="content">
-							{" "}
 							Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with
 							invite-only team access, data encryption, and data export.
 						</div>
@@ -58,9 +56,10 @@ const MeetingLandingPage = () => {
 				</div>
 			</div>
 			<div className="footer section">
-				<div className="number">
-					<img src={number2} alt="number 2" />
-				</div>
+            <div className="number">
+						<div className="rectangle"></div>
+						<div className="circle">02</div>
+					</div>
 				<div className="text-content">
 					<div className="title">Experience more together</div>
 					<div className="sub-title">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</div>
