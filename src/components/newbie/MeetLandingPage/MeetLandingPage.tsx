@@ -6,6 +6,7 @@ import menInMeeting from "./assets/images/desktop/image-men-in-meeting.jpg";
 import womanInVideocall from "./assets/images/desktop/image-woman-in-videocall.jpg";
 import womenVideochatting from "./assets/images/desktop/image-women-videochatting.jpg";
 import "./MeetLandingPage.css";
+import footerImg from "./assets/images/desktop/image-footer.jpg";
 
 const MeetingLandingPage = () => {
 	return (
@@ -56,10 +57,10 @@ const MeetingLandingPage = () => {
 				</div>
 			</div>
 			<div className="footer section">
-            <div className="number">
-						<div className="rectangle"></div>
-						<div className="circle">02</div>
-					</div>
+				<div className="number">
+					<div className="rectangle"></div>
+					<div className="circle">02</div>
+				</div>
 				<div className="text-content">
 					<div className="title">Experience more together</div>
 					<div className="sub-title">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</div>
