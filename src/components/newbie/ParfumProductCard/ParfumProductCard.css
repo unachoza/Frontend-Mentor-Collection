@@ -26,10 +26,20 @@
 	width: 100%;
 	max-width: 80rem;
 	text-align: center;
+}
+
+.body {
 	background-color: var(--cream);
+	height: 100vh;
+	width: 100vw;
+	position: relative;
 }
 
 .card-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	display: flex;
 	width: 100%;
 	max-width: 37.5rem;
@@ -75,7 +85,7 @@
 .name {
 	font-size: 2.2rem;
 	font-family: var(--font-fancy);
-    color: var(--black);
+	color: var(--black);
 	padding: 0 15px;
 }
 
@@ -113,7 +123,7 @@
 	align-items: center;
 	justify-content: space-around;
 	margin: 0 20px 20px 20px;
-	padding: 15px 50px;
+	padding: 15px;
 	background-color: var(--green500);
 	color: var(--white);
 	font-family: var(--font-basic);
