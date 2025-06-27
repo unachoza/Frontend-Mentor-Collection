@@ -30,7 +30,7 @@ body {
 }
 
 .root {
-	min-width: 1280px;
+	/* max-width: 1280px; */
 	height: 100vh;
 	width: 100vw;
 	margin: 0 auto;
@@ -133,8 +133,8 @@ body {
 	flex-direction: column;
 	padding: 0 30%;
 	align-items: center;
-	justify-content: center;
-	height: 200px;
+	justify-content: space-between;
+	height: 240px;
 }
 
 .main.section .main-content .text-content .title {
@@ -145,6 +145,7 @@ body {
 	color: var(--Cyan-600);
 	text-transform: uppercase;
 	margin: 0;
+	margin-bottom: 15px;
 }
 
 .main.section .main-content .text-content .sub-title {
@@ -180,7 +181,6 @@ body {
 	z-index: 1;
 	position: relative;
 	background-color: var(--Cyan-600);
-	/* fill: var(--Cyan-600); */
 	background-blend-mode: overlay;
 	background-image: url("./assets/images/desktop/image-footer.jpg");
 	background-size: cover;
@@ -297,11 +297,23 @@ button.purple span {
 	background-color: var(--Purple-600);
 }
 
+.space {
+	height: 200px;
+}
+
 /* Responsive */
 /* tablet */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
-	* {
+	.hero-left,
+	.hero-right {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	/* * {
 		border: solid red;
+	} */
+	.nav {
+		height: 10vh;
 	}
 	#tablet {
 		display: inline;
@@ -311,12 +323,53 @@ button.purple span {
 		width: 100%;
 	}
 	.hero {
-		height: 73vh;
+		height: 60vh;
 		display: flex;
 		flex-direction: column;
 	}
-	.hero-left, .hero-right {
+	.hero .text-content {
+		width: 65%;
+	}
+	.hero-left,
+	.hero-right {
 		display: none;
+	}
+
+	.main.section .main-content .image-collage img {
+		height: 150px;
+	}
+	.image-collage {
+		margin-bottom: 20px;
+	}
+
+	.main.section {
+		height: 40vh;
+	}
+
+	.main.section .main-content .text-content {
+		display: flex;
+		flex-direction: column;
+		padding: 0 17%;
+		align-items: center;
+		justify-content: space-between;
+		height: 241px;
+	}
+
+	.footer.section {
+		background-image: url("./assets/images/tablet/image-footer.jpg");
+	}
+
+	.footer .text-content {
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 90%;
+	}
+	.footer .text-content .title {
+		width: 100%;
+	}
+
+	.footer .text-content .sub-title {
+		width: 65%;
 	}
 }
 

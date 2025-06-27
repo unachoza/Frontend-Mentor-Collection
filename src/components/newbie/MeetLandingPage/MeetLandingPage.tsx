@@ -7,6 +7,7 @@ import womanInVideocall from "./assets/images/desktop/image-woman-in-videocall.j
 import womenVideochatting from "./assets/images/desktop/image-women-videochatting.jpg";
 import classes from "./MeetLandingPage.module.css";
 import heroTablet from "./assets/images/tablet/image-hero.png";
+// import footerTablet from "./assets/images/tablet/image-footer.jpg"
 
 const MeetingLandingPage = () => {
 	return (
@@ -35,12 +36,12 @@ const MeetingLandingPage = () => {
 					<img src={heroRight} alt="a collection of faces in circles" />
 				</div>
 			</div>
+			<div className={`${classes.number} ${classes.space}`}>
+				<div className={classes.rectangle}></div>
+				<div className={classes.circle}>01</div>
+			</div>
 			<div className={`${classes.main} ${classes.section}`}>
 				<div className={classes["main-content"]}>
-					<div className={classes.number}>
-						<div className={classes.rectangle}></div>
-						<div className={classes.circle}>01</div>
-					</div>
 					<div className={classes["image-collage"]}>
 						<img src={womenVideochatting} alt=" women video chatting" />
 						<img src={womanInVideocall} alt="woman in videocall" />
