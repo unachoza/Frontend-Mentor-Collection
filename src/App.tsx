@@ -17,6 +17,9 @@ function App() {
 					<li>
 						<Link to="/meet">Meet Landing Page</Link>
 					</li>
+					<li>
+						<Link to="/faq">FAQ</Link>
+					</li>
 				</ol>
 			</div>
 		</>
