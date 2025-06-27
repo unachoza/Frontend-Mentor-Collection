@@ -176,7 +176,7 @@ body {
 /******** Footer ********/
 
 .footer.section {
-	height: 330px;
+	height: 34vh;
 	padding: 0;
 	z-index: 1;
 	position: relative;
@@ -303,18 +303,17 @@ button.purple span {
 
 /* Responsive */
 /* tablet */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (max-device-width: 1024px) and (orientation: portrait) {
 	.hero-left,
 	.hero-right {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	/* * {
-		border: solid red;
-	} */
 	.nav {
-		height: 10vh;
+		display: flex;
+		justify-content: center;
 	}
+
 	#tablet {
 		display: inline;
 	}
@@ -329,6 +328,7 @@ button.purple span {
 	}
 	.hero .text-content {
 		width: 65%;
+		padding: 0% 5%;
 	}
 	.hero-left,
 	.hero-right {
@@ -356,13 +356,14 @@ button.purple span {
 	}
 
 	.footer.section {
+		height: 50vh;
 		background-image: url("./assets/images/tablet/image-footer.jpg");
 	}
 
 	.footer .text-content {
 		flex-direction: column;
 		justify-content: space-evenly;
-		height: 90%;
+		height: 50%;
 	}
 	.footer .text-content .title {
 		width: 100%;
@@ -371,8 +372,79 @@ button.purple span {
 	.footer .text-content .sub-title {
 		width: 65%;
 	}
+
+	button {
+		padding: 5px 10px;
+	}
 }
 
 /* mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.hero {
+		height: 65vh;
+	}
+	img#tablet {
+		margin-bottom: 50px;
+	}
+	.main.section .main-content .image-collage img {
+		height: 145px;
+	}
+
+	.hero .text-content {
+		width: 90%;
+		height: 100%;
+		padding: 0;
+	}
+	.hero .text-content .title {
+		font-size: 3rem;
+		margin-top: 0;
+	}
+
+	.hero .text-content .buttons-container {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0;
+	}
+	.hero .buttons-container button {
+		width: fit-content;
+		padding: 10px 30px;
+	}
+
+	.main.section {
+		height: 74vh;
+	}
+	.main .image-collage {
+		flex-wrap: wrap;
+	}
+
+	.main .image-collage img {
+		margin: 5px;
+	}
+
+	.main.section .main-content {
+		margin: 2% 8% 4% 8%;
+	}
+
+	.main.section .main-content .text-content {
+		padding: 0;
+		height: fit-content;
+	}
+
+	.main.section .main-content .text-content .sub-title {
+		font-size: 2rem;
+	}
+
+	.footer.section {
+		background-image: url("./assets/images/mobile/image-footer.jpg");
+	}
+
+	.footer button {
+		padding: 5px 10px;
+	}
+	.footer .text-content {
+		height: 85%;
+	}
+	.footer .text-content .sub-title {
+		width: 103%;
+	}
 }
