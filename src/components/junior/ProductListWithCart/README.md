@@ -2,12 +2,6 @@
 
 ## The challenge
 
-Your challenge is to build out this product list project that includes a functional cart and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So, if you have something you'd like to practice, feel free to give it a go.
-
-We provide the data for the products in a local `data.json` file. So you can use that to populate the UI dynamically if you choose.
-
 Your users should be able to: 
 
 - Add items to the cart and remove them

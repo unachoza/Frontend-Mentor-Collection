@@ -1,0 +1,69 @@
+.card {
+}
+
+.image-and-button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: -1.375rem;
+	align-self: stretch;
+}
+
+.card img {
+	display: flex;
+	height: 15rem;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.5rem;
+	align-self: stretch;
+	border-radius: 1.5rem;
+}
+
+button {
+	border-radius: 62.4375rem;
+	border: 1px solid var(--Rose400, #ad8a85);
+	background: var(--White, #fff);
+	margin-top: -1.5rem;
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.product-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.25rem;
+	align-self: stretch;
+}
+
+.category {
+	color: var(--Rose500, #87635a);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.name {
+	color: var(--Rose900, #260f08);
+	font-family: "RedHat";
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.price {
+	color: var(--Red, #c73b0f);
+	font-family: "RedHat";
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
