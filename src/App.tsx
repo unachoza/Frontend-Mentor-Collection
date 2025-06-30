@@ -20,6 +20,9 @@ function App() {
 					<li>
 						<Link to="/faq">FAQ</Link>
 					</li>
+					<li>
+						<Link to="/productlistwithcart">Dessert List with Cart</Link>
+					</li>
 				</ol>
 			</div>
 		</>

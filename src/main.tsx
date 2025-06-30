@@ -6,6 +6,7 @@ import ParfumProductCard from "./components/newbie/ParfumProductCard/ParfumProdu
 import FourCardFeatureSections from "./components/newbie/FourCardFeature/FourCardFeatureSections.tsx";
 import MeetingLandingPage from "./components/newbie/MeetLandingPage/MeetLandingPage.tsx";
 import FaqAccordion from "./components/newbie/FaqAccordion/FaqAccordion.tsx";
+import ProductListWithCart from "./components/junior/ProductListWithCart/ProductListWithCart.tsx";
 
 createRoot(document.getElementById("root")!).render(
 	<BrowserRouter>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
 			<Route path="four" element={<FourCardFeatureSections />} />
 			<Route path="meet" element={<MeetingLandingPage />} />
 			<Route path="faq" element={<FaqAccordion />} />
+			<Route path="productlistwithcart" element={<ProductListWithCart />} />
 		</Routes>
 	</BrowserRouter>
 );
