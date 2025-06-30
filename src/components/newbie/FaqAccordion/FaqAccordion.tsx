@@ -3,9 +3,9 @@ import classes from "./FaqAccordion.module.css";
 const FaqAccordion = () => {
 	return (
 		<div className={classes.main}>
-			<div className="card">
-				<div className="title"></div>
-				<div className="faq-list"></div>
+			<div className={classes.card}>
+				<div className={classes.title}></div>
+				<div className={classes["faq-list"]}></div>
 			</div>
 		</div>
 	);

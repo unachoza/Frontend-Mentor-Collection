@@ -12,37 +12,46 @@
 	--Purple600: #886990;
 	--Purple100: #f8eeff;
 	--Violet600: #ad28eb;
+
+	--spacing-8px: 8px;
+	--spacing-16px: 16px;
+	--spacing-24px: 24px;
+	--spacing-32px: 32px;
+	--spacing-40px: 40px;
 }
 
+*,
 *::before,
 *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	background-color: white;
 }
 
-.root {
-	min-width: 1280px;
-	height: 100vh;
-	width: 100vw;
-	margin: 0 auto;
+html,
+body {
+	height: 100%;
 }
 
 .main {
-	min-height: 100vh;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-image: url("./assets/images/background-pattern-desktop.svg");
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-color: var(--Purple100);
+	border: solid red 3px;
 }
 
 .card {
-	display: flex;
-	padding: var(--spacing-500, 2.5rem);
+	height: 37.5rem;
+	width: 35.3rem;
+	padding: var(--spacing-40px, 2.5rem);
 	flex-direction: column;
-	align-items: flex-start;
 	gap: var(--spacing-400, 2rem);
-	align-self: stretch;
 	border-radius: 1rem;
 	background: var(--colors-white, #fff);
 	box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.1);
