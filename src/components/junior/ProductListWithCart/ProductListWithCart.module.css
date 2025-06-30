@@ -36,27 +36,29 @@ body {
 .main {
 	height: 100vh;
 	width: 100vw;
-	border: solid red 3px;
 	display: flex;
 	flex-direction: row;
-	padding: 5.5rem 2.5rem;
+	padding: 4.5rem 2.5rem;
 	gap: 0.5rem;
+    background-color: var(--Rose50);
+    overflow: scroll;
+    overflow-y: visible;
 }
 
 .product-list-container {
-	border: solid blueviolet 3px;
+	flex-direction: column;
+	width: 65%;
+	display: flex;
+	gap: 2rem;
 }
 
 .product-list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-    gap: 1rem;
+	gap: 1rem;
 }
 
-.cart {
-	border: solid olive 3px;
-}
 h1.title {
 	color: var(--Rose900);
 	font-family: "RedHat";

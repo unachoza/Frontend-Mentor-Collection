@@ -11,7 +11,7 @@
 
 .card img {
 	display: flex;
-	height: 15rem;
+	width: 16rem;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
@@ -20,18 +20,6 @@
 	border-radius: 1.5rem;
 }
 
-button {
-	border-radius: 62.4375rem;
-	border: 1px solid var(--Rose400, #ad8a85);
-	background: var(--White, #fff);
-	margin-top: -1.5rem;
-	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-}
 
 .product-info {
 	display: flex;

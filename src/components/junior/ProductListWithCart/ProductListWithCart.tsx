@@ -2,6 +2,7 @@ import classes from "./ProductListWithCart.module.css";
 import emptyCart from "/assets/ProductListWithCart/images/illustration-empty-cart.svg";
 import data from "./data/data.json";
 import Product from "./components/Product/Product";
+import Cart from "./components/Cart/Cart";
 
 const ProductListWithCart = () => {
 	return (
@@ -14,9 +15,7 @@ const ProductListWithCart = () => {
 					))}
 				</div>
 			</div>
-			<div className={classes.cart}>
-				<img src={emptyCart} alt="" />
-			</div>
+			<Cart />
 		</div>
 	);
 };

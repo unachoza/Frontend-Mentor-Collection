@@ -1,4 +1,5 @@
 import classes from "./Product.module.css";
+import Button from "../Button/Button";
 
 type Product = {
 	image: {
@@ -22,7 +23,7 @@ const Product = ({ productInfo }: ProductProps) => {
 		<div className={classes.card}>
 			<div className={classes["image-and-button-container"]}>
 				<img src={image ? image.desktop : ""} alt={name} />
-				<button>Add to Cart</button>
+				<Button />
 			</div>
 			<div className={classes["product-info"]}>
 				<div className={classes.category}>{category}</div>

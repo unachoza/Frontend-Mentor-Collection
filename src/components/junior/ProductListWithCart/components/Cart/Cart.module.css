@@ -1,0 +1,45 @@
+.cart img {
+	width: 8rem;
+	height: 8rem;
+}
+
+.cart {
+	border: solid olive 3px;
+	display: flex;
+	width: 35%;
+	padding: 1.5rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.5rem;
+	background-color: var(--White);
+}
+
+.cart-title-text {
+	color: var(--Red, #c73b0f);
+	font-family: "RedHat";
+	font-size: var(--font-size-text-preset-2, 1.5rem);
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-align: left;
+}
+
+.cart-empty-text {
+	color: var(--Rose-500, #87635a);
+	text-align: center;
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.empty-placeholder {
+	display: flex;
+	padding: 1rem 0rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--spacing-200, 1rem);
+	align-self: stretch;
+}
