@@ -134,10 +134,10 @@ h1 {
 		text-align: left;
 		gap: var(--spacing-300, 1.5rem);
 	}
-    .faq-list > div:not(:last-child) {
-        padding-bottom: var(--spacing-24px, 2rem);
-        margin-bottom: var(--spacing-24px, 2rem);
-    }
+	.faq-list > div:not(:last-child) {
+		padding-bottom: var(--spacing-24px, 2rem);
+		margin-bottom: var(--spacing-24px, 2rem);
+	}
 }
 
 img {

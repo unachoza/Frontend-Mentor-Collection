@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent, MouseEvent } from "react";
+import { useState, type KeyboardEvent, type MouseEvent } from "react";
 import { type Faq } from "./data/faq.ts";
 import classes from "./FaqAccordion.module.css";
 import plus from "./assets/images/icon-plus.svg";
