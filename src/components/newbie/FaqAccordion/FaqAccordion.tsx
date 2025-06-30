@@ -7,10 +7,10 @@ const FaqAccordion = () => {
 	return (
 		<div className={classes.main}>
 			<div className={classes.card}>
-				<div className={classes.title}>
+				<h1 className={classes.title}>
 					<img src={star} alt="" />
 					FAQs
-				</div>
+				</h1>
 				<div className={classes["faq-list"]}>
 					{faqs.map((faq: Faq) => (
 						<FaqItem key={faq.id} faq={faq} />
