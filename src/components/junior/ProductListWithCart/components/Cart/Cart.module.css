@@ -4,7 +4,6 @@
 }
 
 .cart {
-	border: solid olive 3px;
 	display: flex;
 	width: 35%;
 	padding: 1.5rem;
@@ -12,6 +11,7 @@
 	align-items: flex-start;
 	gap: 1.5rem;
 	background-color: var(--White);
+	border-radius: 0.75rem;
 }
 
 .cart-title-text {
@@ -24,6 +24,66 @@
 	text-align: left;
 }
 
+.added-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+}
+
+.item-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--spacing-100, 0.5rem);
+}
+
+.item-info .name {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.item-info .quantity-and-price {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--spacing-100, 0.5rem);
+}
+
+.quantity-and-price .quantity {
+	color: var(--Red);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.quantity-and-price .price {
+	color: var(--Rose500);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.quantity-and-price .total {
+	color: var(--Rose500);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+button.remove-button {
+	height: 1.125rem;
+	width: 1.125rem;
+}
 .cart-empty-text {
 	color: var(--Rose-500, #87635a);
 	text-align: center;

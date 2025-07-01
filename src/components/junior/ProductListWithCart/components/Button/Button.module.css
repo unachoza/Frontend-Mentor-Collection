@@ -21,19 +21,36 @@ button img {
 	height: 1.25rem;
 	flex-shrink: 0;
 }
+
 button span {
 	width: 1.25rem;
 	height: 1.25rem;
 }
 
-button:hover {
+button:hover:not(:focus) {
 	border: 1px solid var(--Red);
 	color: var(--Red);
 	background-color: white;
 }
 
-button:active,
-button:focus {
+button.inactive-button:hover {
+	border: 1px solid var(--Red);
+	color: var(--Red);
+	background-color: white;
+}
+
+.quantity-button {
 	background-color: var(--Red);
 	color: var(--White);
+	display: flex;
+	justify-content: space-around;
+}
+
+button.quantity-button:hover {
+	background-color: var(--Red);
+	cursor: default;
+}
+
+button.quantity-button span:hover {
+	cursor: pointer;
 }
