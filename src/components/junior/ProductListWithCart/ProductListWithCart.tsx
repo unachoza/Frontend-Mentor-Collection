@@ -36,6 +36,10 @@ const ProductListWithCart = () => {
 		);
 	};
 
+	const removeAll = (id:number): void => {
+		setShopppingCart((prevCart) => prevCart.filter(item => item.id !== id))
+	}
+
 	return (
 		<div className={classes.main}>
 			<div className={classes["product-list-container"]}>
@@ -46,7 +50,7 @@ const ProductListWithCart = () => {
 					))}
 				</div>
 			</div>
-			<Cart cart={shopppingCart} />
+			<Cart cart={shopppingCart} removeAll={removeAll}/>
 		</div>
 	);
 };

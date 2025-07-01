@@ -6,9 +6,10 @@ import treeIcon from "../../assets/treeIcon.svg";
 
 interface CartProps {
 	cart: Item[];
+	removeAll: (id: number) => void;
 }
 
-const Cart = ({ cart }: CartProps) => {
+const Cart = ({ cart, removeAll }: CartProps) => {
 	const getTotalQuantity = (): number => {
 		let total = 0;
 		cart.forEach((item) => (total += item.quantity));
@@ -20,13 +21,14 @@ const Cart = ({ cart }: CartProps) => {
 		cart.forEach((item) => (total += item.quantity * item.price));
 		return total;
 	};
+
 	return (
 		<div className={classes["cart-container"]}>
 			<div className={classes["cart-title-text"]}>
 				Your Cart (<span>{getTotalQuantity()}</span>)
 			</div>
 			{cart.map((item) => {
-				const { name, price, quantity } = item;
+				const { id, name, price, quantity } = item;
 				return (
 					<div className={classes["added-item"]}>
 						<div className={classes["item-info"]}>
@@ -37,7 +39,7 @@ const Cart = ({ cart }: CartProps) => {
 								<div className={classes.total}>{(quantity * price).toFixed(2)}</div>
 							</div>
 						</div>
-						<button className={classes["remove-button"]}>
+						<button className={classes["remove-button"]} onClick={() => removeAll(id)}>
 							<img src={removeIcon} alt="" />
 						</button>
 					</div>
