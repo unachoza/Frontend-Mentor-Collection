@@ -2,16 +2,28 @@ import classes from "./Cart.module.css";
 import emptyCart from "/assets/ProductListWithCart/images/illustration-empty-cart.svg";
 import { type Item } from "../../ProductListWithCart";
 import removeIcon from "../../assets/removeIcon.svg";
+import treeIcon from "../../assets/treeIcon.svg";
 
 interface CartProps {
 	cart: Item[];
 }
 
 const Cart = ({ cart }: CartProps) => {
+	const getTotalQuantity = (): number => {
+		let total = 0;
+		cart.forEach((item) => (total += item.quantity));
+		return total;
+	};
+
+	const getTotal = (): number => {
+		let total = 0;
+		cart.forEach((item) => (total += item.quantity * item.price));
+		return total;
+	};
 	return (
-		<div className={classes.cart}>
+		<div className={classes["cart-container"]}>
 			<div className={classes["cart-title-text"]}>
-				Your Cart <span>0</span>
+				Your Cart (<span>{getTotalQuantity()}</span>)
 			</div>
 			{cart.map((item) => {
 				const { name, price, quantity } = item;
@@ -31,6 +43,18 @@ const Cart = ({ cart }: CartProps) => {
 					</div>
 				);
 			})}
+			<div className={classes["order-total"]}>
+				<div className={classes.text}>Order Total</div>
+				<div className={classes.total}>${getTotal().toFixed(2)}</div>
+			</div>
+			<div className={classes["carbon-info-container"]}>
+				<div className={classes["carbon-nuetral-info"]}>
+					<img src={treeIcon} alt="carbon nuetral" /> This is a <strong>carbon nuetral</strong> delivery
+				</div>
+			</div>
+			<button className={classes.confirm} onClick={() => console.log("order sent!")}>
+				Confirm Order
+			</button>
 			{cart.length < 1 && (
 				<div className={classes["empty-placeholder"]}>
 					<img src={emptyCart} alt="empty" />

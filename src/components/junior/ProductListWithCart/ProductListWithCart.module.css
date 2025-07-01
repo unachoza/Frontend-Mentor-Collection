@@ -39,7 +39,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	padding: 4.5rem 2.5rem;
-	gap: 0.5rem;
+	gap: 1.5rem;
     background-color: var(--Rose50);
     overflow: scroll;
     overflow-y: visible;
@@ -47,7 +47,7 @@ body {
 
 .product-list-container {
 	flex-direction: column;
-	width: 65%;
+	width: 64%;
 	display: flex;
 	gap: 2rem;
 }
@@ -56,7 +56,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: 2rem;
 }
 
 h1.title {

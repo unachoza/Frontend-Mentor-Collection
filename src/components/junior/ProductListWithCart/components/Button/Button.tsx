@@ -27,6 +27,7 @@ const Button = ({ product, addItem, removeItem }: ButtonProps) => {
 	const handleDecrease = () => {
 		if (quantity > 1) {
 			setQuantity((prevState) => prevState - 1);
+			removeItem(product.id)
 		} else if (quantity == 1) {
 			setQuantity(1);
 			//if quantity is 1, button needs to return to inactive state

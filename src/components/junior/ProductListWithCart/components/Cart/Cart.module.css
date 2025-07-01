@@ -3,9 +3,9 @@
 	height: 8rem;
 }
 
-.cart {
+.cart-container {
 	display: flex;
-	width: 35%;
+	width: 30%;
 	padding: 1.5rem;
 	flex-direction: column;
 	align-items: flex-start;
@@ -24,11 +24,23 @@
 	text-align: left;
 }
 
+.cart {
+	/* width: 100%; */
+	display: flex;
+	width: 24rem;
+	padding: var(--spacing-300, 1.5rem);
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--spacing-300, 1.5rem);
+}
+
 .added-item {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	align-self: stretch;
+	border-bottom: solid 1px var(--Rose100);
+	padding-bottom: 1rem;
 }
 
 .item-info {
@@ -83,7 +95,68 @@
 button.remove-button {
 	height: 1.125rem;
 	width: 1.125rem;
+	margin: 0;
 }
+
+.order-total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+}
+
+.order-total .text {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.order-total .total {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.carbon-info-container {
+	display: flex;
+	padding: 1rem;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	align-self: stretch;
+	background-color: var(--Rose50);
+}
+
+.carbon-nuetral-info {
+	color: var(--Rose900);
+	font-size: 0.875em;
+	font-family: "RedHat";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.carbon-info-container img {
+	height: 1.125rem;
+	width: 1.125rem;
+}
+
+button.confirm {
+	background-color: var(--Red);
+	color: var(--White);
+	margin: 0;
+	display: flex;
+	align-self: stretch;
+}
+
 .cart-empty-text {
 	color: var(--Rose-500, #87635a);
 	text-align: center;

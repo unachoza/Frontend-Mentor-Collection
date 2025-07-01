@@ -8,33 +8,32 @@ export type Item = {
 	id: number;
 	name: string;
 	price: number;
-	quantity?: number;
+	quantity: number;
+};
+
+type ShoppingCart = {
+	item?: Item;
 };
 
 const ProductListWithCart = () => {
 	const [shopppingCart, setShopppingCart] = useState<Item[]>([]);
 
-	const addItem = (item: Item): void => {
-		const { id, name, price } = item;
-		console.log("added", name);
-		//if item is in shopping cart increase quantity,
-		//else add new item
-		// shopppingCart.findIndex((item) => item.id == id);
-		const newItems = [
-			...shopppingCart,
-			{
-				id,
-				name,
-				price,
-				quantity: 1,
-			},
-		];
-		setShopppingCart(newItems);
+	const addItem = (newItem: Item): void => {
+		setShopppingCart((prevCart) => {
+			const existingItem = prevCart.find((item) => item.id === newItem.id);
+
+			if (existingItem) {
+				return prevCart.map((item) => (item.id === newItem.id ? { ...item, quantity: item.quantity + 1 } : item));
+			}
+
+			return [...prevCart, { ...newItem, quantity: 1 }];
+		});
 	};
 
 	const removeItem = (id: number): void => {
-		const updatedItems = shopppingCart.filter((item) => item.id !== id);
-		setShopppingCart(updatedItems);
+		setShopppingCart((prevCart) =>
+			prevCart.map((item) => (item.id === id ? { ...item, quantity: item.quantity - 1 } : item)).filter((item) => item.quantity > 0)
+		);
 	};
 
 	return (

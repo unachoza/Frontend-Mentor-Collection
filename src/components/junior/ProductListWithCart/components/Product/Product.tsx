@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import { type Item } from "../../ProductListWithCart";
 
 export type Product = {
-	id: number,
+	id: number;
 	image: {
 		thumbnail: string;
 		mobile: string;
@@ -32,7 +32,7 @@ const Product = ({ productInfo, addItem, removeItem }: ProductProps) => {
 			<div className={classes["product-info"]}>
 				<div className={classes.category}>{category}</div>
 				<div className={classes.name}>{name}</div>
-				<div className={classes.price}>${price}</div>
+				<div className={classes.price}>${price.toFixed(2)}</div>
 			</div>
 		</div>
 	);
