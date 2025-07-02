@@ -10,6 +10,11 @@ interface ProductProps {
 }
 
 const Product = ({ productInfo, addItem, removeItem, removeAll }: ProductProps) => {
+	const productWithQuantity: Item = {
+		...productInfo,
+		quantity: 1,
+	};
+
 	const { image, name, category, price } = productInfo;
 	return (
 		<div className={classes.card}>
@@ -19,7 +24,7 @@ const Product = ({ productInfo, addItem, removeItem, removeAll }: ProductProps) 
 					<source srcSet={image.tablet} media="(min-width: 700px)" className={classes.tablet} />
 					<img src={image.mobile} className={classes.mobile} alt={name} />
 				</picture>
-				<Button product={productInfo} addItem={addItem} removeItem={removeItem} removeAll={removeAll} />
+				<Button product={productWithQuantity} addItem={addItem} removeItem={removeItem} removeAll={removeAll} />
 			</div>
 			<div className={classes["product-info"]}>
 				<div className={classes.category}>{category}</div>
