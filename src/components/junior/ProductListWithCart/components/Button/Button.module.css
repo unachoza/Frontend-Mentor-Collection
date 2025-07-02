@@ -50,3 +50,16 @@ button.quantity-button:hover {
 button.quantity-button span:hover {
 	cursor: pointer;
 }
+
+/* Responsive */
+/* tablet */
+@media (max-width: 1040px) {
+	button.quantity-button span img {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	button {
+		padding: 10px 0px;
+	}
+}

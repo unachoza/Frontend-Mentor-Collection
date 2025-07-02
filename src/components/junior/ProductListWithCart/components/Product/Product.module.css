@@ -39,3 +39,21 @@
 	color: var(--Red, #c73b0f);
 	font: var(--font-normal);
 }
+
+/* Responsive */
+/* tablet */
+@media (max-width: 1040px) {
+	.card img {
+		height: 13.25rem;
+		width: auto;
+	}
+
+}
+
+/* mobile */
+@media (max-width: 768px) {
+	.card img {
+		height: 13.25rem;
+		width: auto;
+	}
+}

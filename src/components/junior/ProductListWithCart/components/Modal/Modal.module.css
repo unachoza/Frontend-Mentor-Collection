@@ -2,11 +2,11 @@
 	background: rgba(0, 0, 0, 0.6);
 	display: none;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	inset: 0;
 	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal {
@@ -156,4 +156,20 @@
 	color: var(--White);
 	margin: 0;
 	width: 100%;
+}
+
+/* Responsive */
+/* tablet */
+@media (max-width: 1040px) {
+}
+
+/* mobile */
+@media (max-width: 768px) {
+	.modal {
+		width: 100%;
+	}
+
+	.title {
+		text-align: left;
+	}
 }

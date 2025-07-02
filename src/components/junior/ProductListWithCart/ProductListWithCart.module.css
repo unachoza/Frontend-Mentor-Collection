@@ -68,5 +68,25 @@ body {
 
 h1.title {
 	color: var(--Rose900);
-	font: var(--font-heading)
+	font: var(--font-heading);
+}
+
+/* Responsive */
+/* tablet */
+@media (max-width: 1040px) {
+	.main {
+		flex-direction: column;
+		padding: 2.5rem;
+	}
+
+	.product-list-container {
+		width: 100%;
+	}
+}
+
+/* mobile */
+@media (max-width: 768px) {
+	.main {
+		padding: 1.5rem;
+	}
 }

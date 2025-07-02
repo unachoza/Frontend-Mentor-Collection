@@ -1,4 +1,4 @@
-import confirmedIcon from "../../assets/icon-order-confirmed.svg";
+import confirmedIcon from "../../assets/icons/icon-order-confirmed.svg";
 import classes from "./Modal.module.css";
 import { type Item } from "../../utils/types";
 import { getTotal } from "../../utils/utils";

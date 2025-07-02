@@ -1,7 +1,7 @@
 import classes from "./Cart.module.css";
 import emptyCart from "/assets/ProductListWithCart/images/illustration-empty-cart.svg";
-import removeIcon from "../../assets/removeIcon.svg";
-import treeIcon from "../../assets/treeIcon.svg";
+import removeIcon from "../../assets/icons/removeIcon.svg";
+import treeIcon from "../../assets/icons/treeIcon.svg";
 import { type Item } from "../../utils/types";
 import { getTotal, getTotalQuantity } from "../../utils/utils";
 

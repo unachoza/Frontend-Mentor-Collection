@@ -1,8 +1,8 @@
 import { useState } from "react";
 import classes from "./Button.module.css";
-import addToCartIcon from "/assets/ProductListWithCart/images/icon-add-to-cart.svg";
-import addIcon from "../../assets/AddIcon.svg";
-import subtractIcon from "../../assets/SubtractIcon.svg";
+import addToCartIcon from "../../assets/icons/icon-add-to-cart.svg";
+import addIcon from "../../assets/icons/AddIcon.svg";
+import subtractIcon from "../../assets/icons/SubtractIcon.svg";
 import { type Item } from "../../utils/types";
 
 interface ButtonProps {

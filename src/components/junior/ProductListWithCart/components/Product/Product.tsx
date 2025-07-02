@@ -14,7 +14,11 @@ const Product = ({ productInfo, addItem, removeItem, removeAll }: ProductProps) 
 	return (
 		<div className={classes.card}>
 			<div className={classes["image-and-button-container"]}>
-				<img src={image ? image.desktop : ""} alt={name} />
+				<picture>
+					<source srcSet={image.desktop} media="(min-width: 1024px)" />
+					<source srcSet={image.tablet} media="(min-width: 700px)" className={classes.tablet} />
+					<img src={image.mobile} className={classes.mobile} alt={name} />
+				</picture>
 				<Button product={productInfo} addItem={addItem} removeItem={removeItem} removeAll={removeAll} />
 			</div>
 			<div className={classes["product-info"]}>

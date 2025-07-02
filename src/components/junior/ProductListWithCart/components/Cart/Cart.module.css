@@ -147,3 +147,16 @@ button.confirm {
 	align-self: stretch;
 	width: 100%;
 }
+
+/* Responsive */
+/* tablet */
+@media (max-width: 1040px) {
+	.main {
+		border: solid purple 3px;
+		display: flex;
+		flex-direction: column;
+	}
+	.cart-container {
+		width: 100%;
+	}
+}
