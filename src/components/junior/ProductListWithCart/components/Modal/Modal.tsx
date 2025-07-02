@@ -25,7 +25,7 @@ const Modal = ({ shopppingCart, closeModal, clearCart }: ModalProps) => {
 				</div>
 				<div className={classes["confirmed-items"]}>
 					{shopppingCart.map((item) => (
-						<div className={classes["confirmed-item"]}>
+						<div key={item.id} className={classes["confirmed-item"]}>
 							<div className={classes.item}>
 								<img src={item.image.thumbnail} alt={item.name} />
 								<div className={classes["item-info"]}>
