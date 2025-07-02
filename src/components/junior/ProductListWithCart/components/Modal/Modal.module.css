@@ -1,0 +1,186 @@
+.modal-container {
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+}
+
+.modal {
+	display: flex;
+	width: 37rem;
+	padding: 2.5rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2rem;
+	flex-shrink: 0;
+	border-radius: 0.75rem;
+	background: var(--White);
+	animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.show-modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.5rem;
+	align-self: stretch;
+}
+
+.title-info img {
+	height: 3rem;
+	width: 3rem;
+}
+
+.title-info .title {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 2.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%; /* 3rem */
+}
+
+.title-info .sub-title {
+	color: var(--Rose500);
+	font-family: "RedHat";
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.confirmed-items {
+	display: flex;
+	padding: 1.5rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.5rem;
+	align-self: stretch;
+	border-radius: 0.5rem;
+	background: var(--Rose50);
+}
+
+.confirmed-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+	border-bottom: var(--Rose100) solid 1px;
+	padding-bottom: 1rem;
+}
+
+.confirmed-item .item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.confirmed-item .item img {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 0.25rem;
+}
+
+.item .item-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5rem;
+}
+
+.item .amount {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+}
+
+.item .name {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.item .quantity {
+	color: var(--Red);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.item .price {
+	color: var(--Rose500);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.confirmed-item .total-price {
+	color: var(--Rose900);
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.order-total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+}
+
+.order-total .text {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.order-total .total {
+	color: var(--Rose900);
+	font-family: "RedHat";
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.button-container {
+	width: 100%;
+}
+
+.modal button {
+	background-color: var(--Red);
+	color: var(--White);
+	margin: 0;
+	width: 100%;
+}
