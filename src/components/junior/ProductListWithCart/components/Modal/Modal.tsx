@@ -1,6 +1,7 @@
 import confirmedIcon from "../../assets/icon-order-confirmed.svg";
 import classes from "./Modal.module.css";
-import { type Item } from "../../ProductListWithCart";
+import { type Item } from "../../utils/types";
+import { getTotal } from "../../utils/utils";
 
 interface ModalProps {
 	shopppingCart: Item[];
@@ -9,12 +10,6 @@ interface ModalProps {
 }
 
 const Modal = ({ shopppingCart, closeModal, clearCart }: ModalProps) => {
-	const getTotal = (): number => {
-		let total = 0;
-		shopppingCart.forEach((item) => (total += item.quantity * item.price));
-		return total;
-	};
-
 	const handleStartNewOrder = () => {
 		clearCart();
 		closeModal();
@@ -46,7 +41,7 @@ const Modal = ({ shopppingCart, closeModal, clearCart }: ModalProps) => {
 					))}
 					<div className={classes["order-total"]}>
 						<div className={classes.text}>Order Total</div>
-						<div className={classes.total}>${getTotal().toFixed(2)}</div>
+						<div className={classes.total}>${getTotal(shopppingCart).toFixed(2)}</div>
 					</div>
 				</div>
 				<div className={classes["button-container"]}>

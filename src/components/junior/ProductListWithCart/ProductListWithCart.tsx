@@ -1,8 +1,8 @@
 import classes from "./ProductListWithCart.module.css";
 import data from "./data/data.json";
-import Product from "./components/Product/Product";
 import Cart from "./components/Cart/Cart";
 import Modal from "./components/Modal/Modal";
+import Product from "./components/Product/Product";
 import { useState } from "react";
 
 export type Images = {
@@ -18,10 +18,6 @@ export type Item = {
 	price: number;
 	quantity: number;
 	image: Images;
-};
-
-type ShoppingCart = {
-	item?: Item;
 };
 
 const ProductListWithCart = () => {

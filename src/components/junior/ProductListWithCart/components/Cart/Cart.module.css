@@ -16,11 +16,7 @@
 
 .cart-title-text {
 	color: var(--Red, #c73b0f);
-	font-family: "RedHat";
-	font-size: var(--font-size-text-preset-2, 1.5rem);
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	font: var(--font-title);
 	text-align: left;
 }
 
@@ -51,11 +47,7 @@
 
 .item-info .name {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 }
 
 .item-info .quantity-and-price {
@@ -66,29 +58,17 @@
 
 .quantity-and-price .quantity {
 	color: var(--Red);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 }
 
 .quantity-and-price .price {
 	color: var(--Rose500);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	font: var(--font-body);
 }
 
 .quantity-and-price .total {
 	color: var(--Rose500);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 }
 
 button.remove-button {
@@ -106,20 +86,12 @@ button.remove-button {
 
 .order-total .text {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	font: var(--font-body);
 }
 
 .order-total .total {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	font: var(--font-title);
 }
 
 .carbon-info-container {
@@ -135,8 +107,7 @@ button.remove-button {
 
 .carbon-nuetral-info {
 	color: var(--Rose900);
-	font-size: 0.875em;
-	font-family: "RedHat";
+	font: var(--font-body);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -151,11 +122,7 @@ button.remove-button {
 .cart-empty-text {
 	color: var(--Rose-500, #87635a);
 	text-align: center;
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 }
 
 .empty-placeholder {

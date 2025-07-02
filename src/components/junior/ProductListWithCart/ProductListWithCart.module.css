@@ -18,6 +18,13 @@
 	--Rose400: hsl(7, 20%, 60%);
 	--Rose500: hsl(12, 20%, 44%);
 	--Rose900: hsl(14, 65%, 9%);
+
+	/* font: [font-weight] [font-size]/[line-height] [font-family]; */
+	--font-heading: 700 2.5rem/1.2 "RedHat", sans-serif;
+	--font-title: 700 1.5rem "RedHat", sans-serif;
+	--font-normal: 700 1rem "RedHat", sans-serif;
+	--font-body-bold: 600 0.875rem "RedHat", sans-serif;
+	--font-body: 400 0.875rem "RedHat", sans-serif;
 }
 
 *,
@@ -40,9 +47,9 @@ body {
 	flex-direction: row;
 	padding: 4.5rem 2.5rem;
 	gap: 1.5rem;
-    background-color: var(--Rose50);
-    overflow: scroll;
-    overflow-y: visible;
+	background-color: var(--Rose50);
+	overflow: scroll;
+	overflow-y: visible;
 }
 
 .product-list-container {
@@ -61,9 +68,5 @@ body {
 
 h1.title {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 2.5rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 120%;
+	font: var(--font-heading)
 }

@@ -1,6 +1,3 @@
-.card {
-}
-
 .image-and-button-container {
 	display: flex;
 	flex-direction: column;
@@ -20,7 +17,6 @@
 	border-radius: 1.5rem;
 }
 
-
 .product-info {
 	display: flex;
 	flex-direction: column;
@@ -31,27 +27,15 @@
 
 .category {
 	color: var(--Rose500, #87635a);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	font: var(--font-body);
 }
 
 .name {
 	color: var(--Rose900, #260f08);
-	font-family: "RedHat";
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-normal);
 }
 
 .price {
 	color: var(--Red, #c73b0f);
-	font-family: "RedHat";
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-normal);
 }

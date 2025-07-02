@@ -4,11 +4,7 @@ button {
 	background: var(--White, #fff);
 	margin-top: -1.5rem;
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 	display: flex;
 	flex-direction: row;
 	align-items: center;

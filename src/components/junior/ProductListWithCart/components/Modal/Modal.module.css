@@ -53,11 +53,7 @@
 
 .title-info .title {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 2.5rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 120%; /* 3rem */
+	font: var(--font-heading);
 }
 
 .title-info .sub-title {
@@ -116,37 +112,22 @@
 
 .item .name {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 }
 
 .item .quantity {
 	color: var(--Red);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-body-bold);
 }
 
 .item .price {
 	color: var(--Rose500);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	font: var(--font-body);
 }
 
 .confirmed-item .total-price {
 	color: var(--Rose900);
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+	font: var(--font-normal);
 }
 
 .order-total {
@@ -158,20 +139,12 @@
 
 .order-total .text {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 0.875rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	font: var(--font-body);
 }
 
 .order-total .total {
 	color: var(--Rose900);
-	font-family: "RedHat";
-	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	font: var(--font-title);
 }
 
 .button-container {

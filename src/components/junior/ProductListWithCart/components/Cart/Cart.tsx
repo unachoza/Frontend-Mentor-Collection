@@ -1,8 +1,9 @@
 import classes from "./Cart.module.css";
 import emptyCart from "/assets/ProductListWithCart/images/illustration-empty-cart.svg";
-import { type Item } from "../../ProductListWithCart";
 import removeIcon from "../../assets/removeIcon.svg";
 import treeIcon from "../../assets/treeIcon.svg";
+import { type Item } from "../../utils/types";
+import { getTotal, getTotalQuantity } from "../../utils/utils";
 
 interface CartProps {
 	cart: Item[];
@@ -11,22 +12,10 @@ interface CartProps {
 }
 
 const Cart = ({ cart, removeAll, openModal }: CartProps) => {
-	const getTotalQuantity = (): number => {
-		let total = 0;
-		cart.forEach((item) => (total += item.quantity));
-		return total;
-	};
-
-	const getTotal = (): number => {
-		let total = 0;
-		cart.forEach((item) => (total += item.quantity * item.price));
-		return total;
-	};
-
 	return (
 		<div className={classes["cart-container"]}>
 			<div className={classes["cart-title-text"]}>
-				Your Cart (<span>{getTotalQuantity()}</span>)
+				Your Cart (<span>{getTotalQuantity(cart)}</span>)
 			</div>
 			{cart.map((item) => {
 				const { id, name, price, quantity } = item;
@@ -48,7 +37,7 @@ const Cart = ({ cart, removeAll, openModal }: CartProps) => {
 			})}
 			<div className={classes["order-total"]}>
 				<div className={classes.text}>Order Total</div>
-				<div className={classes.total}>${getTotal().toFixed(2)}</div>
+				<div className={classes.total}>${getTotal(cart).toFixed(2)}</div>
 			</div>
 			<div className={classes["carbon-info-container"]}>
 				<div className={classes["carbon-nuetral-info"]}>

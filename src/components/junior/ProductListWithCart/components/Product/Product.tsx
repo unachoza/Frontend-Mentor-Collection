@@ -1,22 +1,9 @@
 import classes from "./Product.module.css";
 import Button from "../Button/Button";
-import { type Item } from "../../ProductListWithCart";
-
-export type Product = {
-	id: number;
-	image: {
-		thumbnail: string;
-		mobile: string;
-		tablet: string;
-		desktop: string;
-	};
-	name: string;
-	category: string;
-	price: number;
-};
+import { type Item, type ProductType } from "../../utils/types";
 
 interface ProductProps {
-	productInfo: Product;
+	productInfo: ProductType;
 	addItem: (item: Item) => void;
 	removeItem: (id: number) => void;
 	removeAll: (id: number) => void;
