@@ -4,13 +4,20 @@ import { type Item } from "../../ProductListWithCart";
 
 interface ModalProps {
 	shopppingCart: Item[];
+	closeModal: () => void;
+	clearCart: () => void;
 }
 
-const Modal = ({ shopppingCart }: ModalProps) => {
+const Modal = ({ shopppingCart, closeModal, clearCart }: ModalProps) => {
 	const getTotal = (): number => {
 		let total = 0;
 		shopppingCart.forEach((item) => (total += item.quantity * item.price));
 		return total;
+	};
+
+	const handleStartNewOrder = () => {
+		clearCart();
+		closeModal();
 	};
 
 	return (
@@ -43,7 +50,7 @@ const Modal = ({ shopppingCart }: ModalProps) => {
 					</div>
 				</div>
 				<div className={classes["button-container"]}>
-					<button>Start New Order</button>
+					<button onClick={handleStartNewOrder}>Start New Order</button>
 				</div>
 			</div>
 		</div>

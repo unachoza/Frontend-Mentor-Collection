@@ -7,9 +7,10 @@ import treeIcon from "../../assets/treeIcon.svg";
 interface CartProps {
 	cart: Item[];
 	removeAll: (id: number) => void;
+	openModal: () => void;
 }
 
-const Cart = ({ cart, removeAll }: CartProps) => {
+const Cart = ({ cart, removeAll, openModal }: CartProps) => {
 	const getTotalQuantity = (): number => {
 		let total = 0;
 		cart.forEach((item) => (total += item.quantity));
@@ -54,10 +55,12 @@ const Cart = ({ cart, removeAll }: CartProps) => {
 					<img src={treeIcon} alt="carbon nuetral" /> This is a <strong>carbon nuetral</strong> delivery
 				</div>
 			</div>
-			<button className={classes.confirm} onClick={() => console.log("order sent!")}>
-				Confirm Order
-			</button>
-			{cart.length < 1 && (
+			<div className={classes["button-container"]}>
+				<button className={classes.confirm} onClick={() => openModal()}>
+					Confirm Order
+				</button>
+			</div>
+			{cart.length > 1 && (
 				<div className={classes["empty-placeholder"]}>
 					<img src={emptyCart} alt="empty" />
 					<div className={classes["cart-empty-text"]}> Your added items will appear here</div>

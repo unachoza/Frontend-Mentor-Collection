@@ -2,13 +2,22 @@ import classes from "./ProductListWithCart.module.css";
 import data from "./data/data.json";
 import Product from "./components/Product/Product";
 import Cart from "./components/Cart/Cart";
+import Modal from "./components/Modal/Modal";
 import { useState } from "react";
+
+export type Images = {
+	desktop: string;
+	tablet: string;
+	mobile: string;
+	thumbnail: string;
+};
 
 export type Item = {
 	id: number;
 	name: string;
 	price: number;
 	quantity: number;
+	image: Images;
 };
 
 type ShoppingCart = {
@@ -17,6 +26,7 @@ type ShoppingCart = {
 
 const ProductListWithCart = () => {
 	const [shopppingCart, setShopppingCart] = useState<Item[]>([]);
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const addItem = (newItem: Item): void => {
 		setShopppingCart((prevCart) => {
@@ -36,9 +46,15 @@ const ProductListWithCart = () => {
 		);
 	};
 
-	const removeAll = (id:number): void => {
-		setShopppingCart((prevCart) => prevCart.filter(item => item.id !== id))
-	}
+	const removeAll = (id: number): void => {
+		setShopppingCart((prevCart) => prevCart.filter((item) => item.id !== id));
+	};
+
+	const clearCart = (): void => {
+		setShopppingCart([]);
+	};
+
+	const toggling = () => setIsOpen((prevState) => !prevState);
 
 	return (
 		<div className={classes.main}>
@@ -46,11 +62,12 @@ const ProductListWithCart = () => {
 				<h1 className={classes.title}>Desserts</h1>
 				<div className={classes["product-list"]}>
 					{data.map((product) => (
-						<Product key={product.id} productInfo={product} addItem={addItem} removeItem={removeItem} />
+						<Product key={product.id} productInfo={product} addItem={addItem} removeItem={removeItem} removeAll={removeAll} />
 					))}
 				</div>
 			</div>
-			<Cart cart={shopppingCart} removeAll={removeAll}/>
+			<Cart cart={shopppingCart} removeAll={removeAll} openModal={toggling} />
+			{isOpen && <Modal shopppingCart={shopppingCart} clearCart={clearCart} closeModal={toggling} />}
 		</div>
 	);
 };

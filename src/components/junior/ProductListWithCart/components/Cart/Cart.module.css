@@ -25,7 +25,6 @@
 }
 
 .cart {
-	/* width: 100%; */
 	display: flex;
 	width: 24rem;
 	padding: var(--spacing-300, 1.5rem);
@@ -149,14 +148,6 @@ button.remove-button {
 	width: 1.125rem;
 }
 
-button.confirm {
-	background-color: var(--Red);
-	color: var(--White);
-	margin: 0;
-	display: flex;
-	align-self: stretch;
-}
-
 .cart-empty-text {
 	color: var(--Rose-500, #87635a);
 	text-align: center;
@@ -175,4 +166,17 @@ button.confirm {
 	align-items: center;
 	gap: var(--spacing-200, 1rem);
 	align-self: stretch;
+}
+
+.button-container {
+	width: 100%;
+}
+
+button.confirm {
+	background-color: var(--Red);
+	color: var(--White);
+	margin: 0;
+	display: flex;
+	align-self: stretch;
+	width: 100%;
 }

@@ -1,44 +1,52 @@
 import { useState } from "react";
 import classes from "./Button.module.css";
 import addToCartIcon from "/assets/ProductListWithCart/images/icon-add-to-cart.svg";
-import carbonNeutralIcon from "/assets/ProductListWithCart/images/icon-carbon-neutral.svg";
 import addIcon from "../../assets/AddIcon.svg";
 import subtractIcon from "../../assets/SubtractIcon.svg";
 import { type Item } from "../../ProductListWithCart";
-import { type Product } from "../Product/Product";
 
 interface ButtonProps {
 	image?: string;
 	text?: string;
 	addItem: (item: Item) => void;
 	removeItem: (id: number) => void;
+	removeAll: (id: number) => void;
 	product: Item;
 }
 
-const Button = ({ product, addItem, removeItem }: ButtonProps) => {
+const Button = ({ product, addItem, removeItem, removeAll }: ButtonProps) => {
 	const [focused, setFocused] = useState(false);
 	const [quantity, setQuantity] = useState(1);
 
 	const handleIncrese = () => {
+		console.log({ quantity }, { focused });
 		addItem(product);
-		setQuantity((prevState) => prevState + 1);
+		if (quantity >= 1 && focused) {
+			setQuantity((prevState) => prevState + 1);
+		}
 	};
 
 	const handleDecrease = () => {
+		console.log();
 		if (quantity > 1) {
 			setQuantity((prevState) => prevState - 1);
-			removeItem(product.id)
+			removeItem(product.id);
 		} else if (quantity == 1) {
 			setQuantity(1);
-			//if quantity is 1, button needs to return to inactive state
+			removeAll(product.id);
 			setFocused(false);
 		}
 	};
 
+	const handleFocus = () => {
+		handleIncrese();
+		setFocused(true);
+	};
+
 	return (
-		<div tabIndex={0} className={classes.wrapper} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}>
+		<div tabIndex={0} className={classes.wrapper} onFocus={() => handleFocus()} onBlur={() => setFocused(false)}>
 			{!focused ? (
-				<button className={classes["inactive-button"]}>
+				<button className={classes["inactive-button"]} onClick={handleIncrese}>
 					<span>
 						<img src={addToCartIcon} alt="add to cart" />
 					</span>
