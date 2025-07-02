@@ -19,7 +19,6 @@ const Button = ({ product, addItem, removeItem, removeAll }: ButtonProps) => {
 	const [quantity, setQuantity] = useState(1);
 
 	const handleIncrese = () => {
-		console.log({ quantity }, { focused });
 		addItem(product);
 		if (quantity >= 1 && focused) {
 			setQuantity((prevState) => prevState + 1);
