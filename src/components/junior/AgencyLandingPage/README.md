@@ -16,7 +16,9 @@ Your users should be able to:
 - CSS Grid
 - [React](https://reactjs.org/) - JS library
 
-
 https://medium.com/@infernote/the-secrete-behind-transform-translate-50-css-property-3c46e7365bc3
 
 https://kittygiraudel.github.io/selectors-explained/
+
+https://cssgridgenerator.io/
+I struggled with the grid generation. Thinking I could solve this with 4 columns no problem. But the 4th row that only has 3 cells would not allow me to center them. Then did a little math realized i needed a lowest common denominator of 12 and reworked the entire grid.
