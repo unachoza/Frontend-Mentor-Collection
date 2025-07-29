@@ -88,7 +88,7 @@ const AgencyLandingPage = () => {
 				</div>
 
 				{/* <!-- Row 4 --> */}
-				<div  className={`${classes["profile-row"]} ${classes["item"]}`}>
+				<div className={`${classes["profile-row"]} ${classes["item"]}`}>
 					<div className={`${classes["profile"]} ${classes["item"]}`}>
 						<img src={emilyHeadshot} className={classes.image} alt="profile image" />
 						<div className={classes.text}>
@@ -137,7 +137,28 @@ const AgencyLandingPage = () => {
 					<img src={sugarCubesRow5Image} alt="sugarCubes" />
 				</div>
 			</div>
-			<div className={classes.footer}></div>
+			<div className={classes.footer}>
+				<div className={classes.logo}></div>
+				<ul className={classes["footer-nav-list"]}>
+					<li>About</li>
+					<li>Services</li>
+					<li>Projects</li>
+				</ul>
+				<ul className={classes["socials-list"]}>
+					<li>
+						<img src={facebookIcon} className={classes["social-icon"]} alt="facebook" />
+					</li>
+					<li>
+						<img src={instagramIcon} className={classes["social-icon"]} alt="instagram" />
+					</li>
+					<li>
+						<img src={twitterIcon} className={classes["social-icon"]} alt="twitter" />
+					</li>
+					<li>
+						<img src={pintrestIcon} className={classes["social-icon"]} alt="pinterest" />
+					</li>
+				</ul>
+			</div>
 		</div>
 	);
 };

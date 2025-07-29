@@ -22,3 +22,6 @@ https://kittygiraudel.github.io/selectors-explained/
 
 https://cssgridgenerator.io/
 I struggled with the grid generation. Thinking I could solve this with 4 columns no problem. But the 4th row that only has 3 cells would not allow me to center them. Then did a little math realized i needed a lowest common denominator of 12 and reworked the entire grid.
+
+Using svg files as embaded images has it's challenges when it comes to changing the svg fill color.
+-webkit-mask-image and related properties was helpful

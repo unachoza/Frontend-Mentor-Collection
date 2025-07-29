@@ -359,6 +359,65 @@ img.image-with-text {
 }
 
 
+.footer{
+      background: #90D4C6;
+      height: 21.875rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-blend-mode: color;
+}
+
+.footer .logo {
+      width: 10.625rem;
+      height: 2.0625rem;
+      fill: #2C7566;
+      background-blend-mode: color;
+      -webkit-mask-image: url(/src/components/junior/AgencyLandingPage/images/logo.svg);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      background-color: #2C7566;
+}
+
+ul.footer-nav-list {
+      display: inline-flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3.5625rem;
+}
+
+.footer-nav-list li {
+      color: #458D7E;
+      font-family: Barlow;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.5625rem; /* 138.889% */
+      letter-spacing: -0.00806rem;
+}
+
+ul.socials-list{
+      display: inline-flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.5rem;
+}
+
+.footer-nav-list li:hover{
+      color: white;
+      cursor: pointer;
+      transition: all ease .2s;
+}
+
+
+img.social-icon:hover{
+      filter: brightness(0) invert(1);
+      cursor: pointer;
+      transition: all ease .2s;
+
+}
+
 
 /* tablet */
 @media (max-width: 1040px) {
