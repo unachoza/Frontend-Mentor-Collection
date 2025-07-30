@@ -13,6 +13,7 @@ import facebookIcon from "./images/icon-facebook.svg";
 import instagramIcon from "./images/icon-instagram.svg";
 import twitterIcon from "./images/icon-twitter.svg";
 import pintrestIcon from "./images/icon-pinterest.svg";
+import arrow from "./images/icon-arrow-down.svg";
 
 import emilyHeadshot from "./images/image-emily.jpg";
 import jennieHeadshot from "./images/image-jennie.jpg";
@@ -36,9 +37,11 @@ const AgencyLandingPage = () => {
 					</div>
 					<div className={classes.title}>We are creatives</div>
 				</div>
+				<img className={classes.arrow} src={arrow} alt="arrow icon" />
 				<img src={orangeSliceHeaderImage} alt="orange" />
 			</div>
-			<div className={`${classes["grid-container"]}`}>
+			<div className={classes["grid-container"]}>
+                        
 				{/* <!-- Row 1 --> */}
 				<div className={`${classes["text-box-container"]} ${classes["item"]}`}>
 					<div className={classes.title}>Transform your brand</div>
@@ -46,15 +49,15 @@ const AgencyLandingPage = () => {
 						We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through
 						compelling visuals that do most of the marketing for you.
 					</div>
-					<div className={classes.link}> Learn more</div>
+					<div className={`${classes.link} ${classes.yellow}`}> Learn more</div>
 				</div>
 				<div className={classes.item}>
-					<img src={eggRow1Image} alt="egg" />
+					<img src={eggRow1Image} className={classes["item-image"]} alt="egg" />
 				</div>
 
 				{/* <!-- Row 2 --> */}
 				<div className={classes.item}>
-					<img src={chaliceRow2Image} alt="chalice" />
+					<img src={chaliceRow2Image} className={classes["item-image"]} alt="chalice" />
 				</div>
 				<div className={`${classes["text-box-container"]} ${classes["item"]}`}>
 					<div className={classes.title}>Stand out to the right audience</div>
@@ -62,7 +65,7 @@ const AgencyLandingPage = () => {
 						Using a collaborative formula of designers, researchers, photographers videographers, and copywriters, we'll build
 						and extend your brand in digital places.
 					</div>
-					<div className={classes.link}> Learn more</div>
+					<div className={`${classes.link} ${classes.red}`}> Learn more</div>
 				</div>
 
 				{/* <!-- Row 3 --> */}
@@ -89,36 +92,40 @@ const AgencyLandingPage = () => {
 
 				{/* <!-- Row 4 --> */}
 				<div className={`${classes["profile-row"]} ${classes["item"]}`}>
-					<div className={`${classes["profile"]} ${classes["item"]}`}>
-						<img src={emilyHeadshot} className={classes.image} alt="profile image" />
-						<div className={classes.text}>
-							We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
-							hit.
+					<div className={classes.title}>CLIENT TESTIMONIALS</div>
+					<div className={classes["testimonial-container"]}>
+						<div className={`${classes["profile"]} ${classes["item"]}`}>
+							<img src={emilyHeadshot} className={classes.image} alt="profile image" />
+							<div className={classes.text}>
+								We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were
+								always hit.
+							</div>
+							<div className={classes.author}>
+								<div className={classes.name}>Emily R.</div>
+								<div className={classes["job-title"]}>Marketing Director</div>
+							</div>
 						</div>
-						<div className={classes.author}>
-							<div className={classes.name}>Emily R.</div>
-							<div className={classes.title}>Marketing Director</div>
+						<div className={`${classes["profile"]} ${classes["item"]}`}>
+							<img src={thomasHeadshot} className={classes.image} alt="profile image" />
+							<div className={classes.text}>
+								Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying
+								and enjoyable experience.
+							</div>
+							<div className={classes.author}>
+								<div className={classes.name}>Thomas S.</div>
+								<div className={classes["job-title"]}>Chief Operating Officer</div>
+							</div>
 						</div>
-					</div>
-					<div className={`${classes["profile"]} ${classes["item"]}`}>
-						<img src={thomasHeadshot} className={classes.image} alt="profile image" />
-						<div className={classes.text}>
-							Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and
-							enjoyable experience.
-						</div>
-						<div className={classes.author}>
-							<div className={classes.name}>Thomas S.</div>
-							<div className={classes.title}>Chief Operating Officer</div>
-						</div>
-					</div>
-					<div className={`${classes["profile"]} ${classes["item"]}`}>
-						<img src={jennieHeadshot} className={classes.image} alt="profile image" />
-						<div className={classes.text}>
-							Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-						</div>
-						<div className={classes.author}>
-							<div className={classes.name}>Jennie F.</div>
-							<div className={classes.title}>Business Owner</div>
+						<div className={`${classes["profile"]} ${classes["item"]}`}>
+							<img src={jennieHeadshot} className={classes.image} alt="profile image" />
+							<div className={classes.text}>
+								Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly
+								recommended!
+							</div>
+							<div className={classes.author}>
+								<div className={classes.name}>Jennie F.</div>
+								<div className={classes["job-title"]}>Business Owner</div>
+							</div>
 						</div>
 					</div>
 				</div>
