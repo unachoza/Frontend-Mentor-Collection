@@ -7,7 +7,7 @@ import FourCardFeatureSections from "./components/newbie/FourCardFeature/FourCar
 import MeetingLandingPage from "./components/newbie/MeetLandingPage/MeetLandingPage.tsx";
 import FaqAccordion from "./components/newbie/FaqAccordion/FaqAccordion.tsx";
 import ProductListWithCart from "./components/junior/ProductListWithCart/ProductListWithCart.tsx";
-import AgencyLandingPage from "./components/junior/AgencyLandingPage/AgencyLandingPAge.tsx";
+import AgencyLandingPage from "./components/junior/AgencyLandingPage/AgencyLandingPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
 	<BrowserRouter>
