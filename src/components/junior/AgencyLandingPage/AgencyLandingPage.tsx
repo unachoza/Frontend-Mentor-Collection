@@ -21,12 +21,9 @@ import emilyHeadshot from "./images/image-emily.jpg";
 import jennieHeadshot from "./images/image-jennie.jpg";
 import thomasHeadshot from "./images/image-thomas.jpg";
 
-import { useScrollInView } from "../../../hooks/useScrollInView";
-
 import classes from "./AgencyLandingPage.module.css";
 
 const AgencyLandingPage = () => {
-	const [ref, isVisible] = useScrollInView();
 	return (
 		<div className={classes.main}>
 			<div className={classes.hero}>
