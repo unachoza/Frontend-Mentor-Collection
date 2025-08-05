@@ -15,13 +15,18 @@ import twitterIcon from "./images/icon-twitter.svg";
 import pintrestIcon from "./images/icon-pinterest.svg";
 import arrow from "./images/icon-arrow-down.svg";
 
+import hamburger from "./images/icon-hamburger.svg";
+
 import emilyHeadshot from "./images/image-emily.jpg";
 import jennieHeadshot from "./images/image-jennie.jpg";
 import thomasHeadshot from "./images/image-thomas.jpg";
 
+import { useScrollInView } from "../../../hooks/useScrollInView";
+
 import classes from "./AgencyLandingPage.module.css";
 
 const AgencyLandingPage = () => {
+	const [ref, isVisible] = useScrollInView();
 	return (
 		<div className={classes.main}>
 			<div className={classes.hero}>
@@ -34,6 +39,16 @@ const AgencyLandingPage = () => {
 							<li>Projects</li>
 							<li className={classes.active}>Contacts</li>
 						</ul>
+						<img src={hamburger} className={classes.hamburger} alt="hamburger icon" />
+					</div>
+					{/* mobile nav */}
+					<div className={`${classes["mobile-nav-container"]}`}>
+						<ul>
+							<li>About</li>
+							<li>Services</li>
+							<li>Projects</li>
+							<li className={classes.active}>Contacts</li>
+						</ul>
 					</div>
 					<div className={classes.title}>We are creatives</div>
 				</div>
@@ -41,8 +56,7 @@ const AgencyLandingPage = () => {
 				<img src={orangeSliceHeaderImage} alt="orange" />
 			</div>
 			<div className={classes["grid-container"]}>
-                        
-				{/* <!-- Row 1 --> */}
+				{/* <!-- Item 1 --> */}
 				<div className={`${classes["text-box-container"]} ${classes["item"]}`}>
 					<div className={classes.title}>Transform your brand</div>
 					<div className={classes.copy}>
@@ -51,14 +65,16 @@ const AgencyLandingPage = () => {
 					</div>
 					<div className={`${classes.link} ${classes.yellow}`}> Learn more</div>
 				</div>
+				{/* <!-- Item 2 --> */}
 				<div className={classes.item}>
 					<img src={eggRow1Image} className={classes["item-image"]} alt="egg" />
 				</div>
 
-				{/* <!-- Row 2 --> */}
+				{/* <!-- Item 3 --> */}
 				<div className={classes.item}>
 					<img src={chaliceRow2Image} className={classes["item-image"]} alt="chalice" />
 				</div>
+				{/* <!-- Item 4 --> */}
 				<div className={`${classes["text-box-container"]} ${classes["item"]}`}>
 					<div className={classes.title}>Stand out to the right audience</div>
 					<div className={classes.copy}>
@@ -68,7 +84,7 @@ const AgencyLandingPage = () => {
 					<div className={`${classes.link} ${classes.red}`}> Learn more</div>
 				</div>
 
-				{/* <!-- Row 3 --> */}
+				{/* <!-- Item 5 --> */}
 				<div className={`${classes["image-with-text-container"]} ${classes["item"]}`}>
 					<img src={cherryRow3Image} className={`${classes["image-with-text"]}`} alt="cherry" />
 					<div className={classes["text-container"]}>
@@ -79,6 +95,7 @@ const AgencyLandingPage = () => {
 						</div>
 					</div>
 				</div>
+				{/* <!-- Item 6 --> */}
 				<div className={`${classes["image-with-text-container"]} ${classes["item"]}`}>
 					<img src={orangeRow3Image} className={classes["image-with-text"]} alt="orange" />
 					<div className={classes["text-container"]}>
@@ -90,7 +107,7 @@ const AgencyLandingPage = () => {
 					</div>
 				</div>
 
-				{/* <!-- Row 4 --> */}
+				{/* <!-- Item 7 --> */}
 				<div className={`${classes["profile-row"]} ${classes["item"]}`}>
 					<div className={classes.title}>CLIENT TESTIMONIALS</div>
 					<div className={classes["testimonial-container"]}>
@@ -129,19 +146,23 @@ const AgencyLandingPage = () => {
 						</div>
 					</div>
 				</div>
-
-				{/* <!-- Row 5 --> */}
-				<div className={classes.item}>
-					<img src={milkRow5Image} alt="milk" />
-				</div>
-				<div className={classes.item}>
-					<img src={orangeSliceRow5Image} alt="orange slice" />
-				</div>
-				<div className={classes.item}>
-					<img src={coneRow5Image} alt="cone" />
-				</div>
-				<div className={classes.item}>
-					<img src={sugarCubesRow5Image} alt="sugarCubes" />
+				<div className={`${classes["image-gallery"]} ${classes["item"]}`}>
+					{/* <!-- Item 8 --> */}
+					<div className={`${classes["gallery-image"]} ${classes["item"]}`}>
+						<img src={milkRow5Image} alt="milk" />
+					</div>
+					{/* <!-- Item 9 --> */}
+					<div className={`${classes["gallery-image"]} ${classes["item"]}`}>
+						<img src={orangeSliceRow5Image} alt="orange slice" />
+					</div>
+					{/* <!-- Item 10 --> */}
+					<div className={`${classes["gallery-image"]} ${classes["item"]}`}>
+						<img src={coneRow5Image} alt="cone" />
+					</div>
+					{/* <!-- Item 11 --> */}
+					<div className={`${classes["gallery-image"]} ${classes["item"]}`}>
+						<img src={sugarCubesRow5Image} alt="sugarCubes" />
+					</div>
 				</div>
 			</div>
 			<div className={classes.footer}>
