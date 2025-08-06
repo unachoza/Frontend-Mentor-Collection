@@ -31,9 +31,15 @@ const AgencyLandingPage = () => {
 					<div className={classes.nav}>
 						<img src={logo} className={classes.logo} alt="logo" />
 						<ul className={`${classes["nav-links"]}`}>
-							<li>About</li>
-							<li>Services</li>
-							<li>Projects</li>
+							<a href="#about">
+								<li>About</li>
+							</a>
+							<a href="#services">
+								<li>Services</li>
+							</a>
+							<a href="#projects">
+								<li>Projects</li>
+							</a>
 							<li className={classes.active}>Contacts</li>
 						</ul>
 						<img src={hamburger} className={classes.hamburger} alt="hamburger icon" />
@@ -41,9 +47,15 @@ const AgencyLandingPage = () => {
 					{/* mobile nav */}
 					<div className={`${classes["mobile-nav-container"]}`}>
 						<ul>
-							<li>About</li>
-							<li>Services</li>
-							<li>Projects</li>
+							<a href="#about">
+								<li>About</li>
+							</a>
+							<a href="#services">
+								<li>Services</li>
+							</a>
+							<a href="#projects">
+								<li>Projects</li>
+							</a>
 							<li className={classes.active}>Contacts</li>
 						</ul>
 					</div>
@@ -54,7 +66,7 @@ const AgencyLandingPage = () => {
 			</div>
 			<div className={classes["grid-container"]}>
 				{/* <!-- Item 1 --> */}
-				<div className={`${classes["text-box-container"]} ${classes["item"]}`}>
+				<div id="about" className={`${classes["text-box-container"]} ${classes["item"]}`}>
 					<div className={classes.title}>Transform your brand</div>
 					<div className={classes.copy}>
 						We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through
@@ -82,7 +94,7 @@ const AgencyLandingPage = () => {
 				</div>
 
 				{/* <!-- Item 5 --> */}
-				<div className={`${classes["image-with-text-container"]} ${classes["item"]}`}>
+				<div id="services" className={`${classes["image-with-text-container"]} ${classes["item"]}`}>
 					<img src={cherryRow3Image} className={`${classes["image-with-text"]}`} alt="cherry" />
 					<div className={classes["text-container"]}>
 						<div className={classes.title}>Graphic design</div>
@@ -105,7 +117,7 @@ const AgencyLandingPage = () => {
 				</div>
 
 				{/* <!-- Item 7 --> */}
-				<div className={`${classes["profile-row"]} ${classes["item"]}`}>
+				<div id="projects" className={`${classes["profile-row"]} ${classes["item"]}`}>
 					<div className={classes.title}>CLIENT TESTIMONIALS</div>
 					<div className={classes["testimonial-container"]}>
 						<div className={`${classes["profile"]} ${classes["item"]}`}>
